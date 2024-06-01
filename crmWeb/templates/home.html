@@ -18,19 +18,19 @@
     {% if records %}
 
       {% for record in records %}      
-          <tbody>
+          
+      <tbody>
+            
             <tr>
-              <a href="{% url 'record' record.id %}">
+              
               <th scope="row">{{record.id}}</th>
-              <td>{{record.first_name}} {{record.last_name}}</td>
+              <td><a href="{% url 'record' record.id %}">{{record.first_name}} {{record.last_name}}</a></td>
               <td>{{record.email}}</td>
               <td>{{record.address}}</td>
               <td>{{record.phone}}</td>
               <td>{{record.created_at}}</td>
-            </a>
-
-
             </tr>
+          </a>
             
           </tbody>
         
